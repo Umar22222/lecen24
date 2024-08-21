@@ -1,0 +1,147 @@
+.navbar {
+    background-color: $white;
+    padding: 1rem 0;
+    border-bottom: 1px solid #e5e5e5;
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .navbar-left {
+        display: flex;
+        align-items: center;
+
+        .logo {
+            height: 40px;
+            margin-right: 1rem;
+        }
+
+        .nav-link {
+            color: $text-color;
+            text-decoration: none;
+            font-size: 1rem;
+            margin-right: 2rem;
+            display: flex;
+            align-items: center;
+
+            .dropdown-arrow {
+                font-size: 0.8rem;
+                margin-left: 0.3rem;
+            }
+        }
+    }
+
+    .navbar-right {
+        display: flex;
+        align-items: center;
+
+        .nav-link {
+            color: $secondary-color;
+            text-decoration: none;
+            font-size: 1rem;
+            margin-right: 1.5rem;
+            display: flex;
+            align-items: center;
+
+            .globe-icon {
+                margin-left: 0.3rem;
+            }
+        }
+
+        .btn {
+            background-color: transparent;
+            color: $text-color;
+            padding: 0.5rem 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-right: 1rem;
+            font-size: 0.9rem;
+        }
+
+        .icons {
+            display: flex;
+            align-items: center;
+
+            .notification-icon {
+                font-size: 1.5rem;
+                margin-right: 1rem;
+                color: $secondary-color;
+            }
+
+            .profile-pic {
+                height: 40px;
+                width: 40px;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+        }
+    }
+}
+
+// Media Queries
+@media (max-width: 768px) {
+    .navbar-left .nav-link {
+        margin-right: 1rem;
+    }
+
+    .navbar-right {
+        .nav-link {
+            margin-right: 1rem;
+        }
+
+        .btn {
+            padding: 0.4rem 0.8rem;
+        }
+
+        .icons {
+            .notification-icon {
+                margin-right: 0.8rem;
+            }
+
+            .profile-pic {
+                height: 35px;
+                width: 35px;
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-left,
+    .navbar-right {
+        width: 100%;
+        justify-content: space-between;
+        margin-bottom: 0.5rem;
+    }
+
+    .navbar-left .nav-link,
+    .navbar-right .nav-link {
+        font-size: 0.9rem;
+    }
+
+    .btn {
+        padding: 0.3rem 0.6rem;
+        font-size: 0.8rem;
+    }
+
+    .icons {
+        .notification-icon {
+            font-size: 1.2rem;
+        }
+
+        .profile-pic {
+            height: 30px;
+            width: 30px;
+        }
+    }
+}
